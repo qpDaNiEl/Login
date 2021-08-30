@@ -5,6 +5,7 @@ import { userControler } from "./userControler";
 import { registerControler } from "./registerControler";
 import { sequelize } from "../dataBase/dataBase";
 import { searchUser } from "./searchUser";
+import { deleteUser } from "./deleteUser";
 
 sequelize.sync()
 
@@ -21,6 +22,8 @@ server.post ('/user', searchUser);
 server.get ('/login', loginControler);
 
 server.post ('/register', registerControler);
+
+server.post ('/delete', deleteUser);
 
 
 

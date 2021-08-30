@@ -1,4 +1,4 @@
 
 export const loginControler = (req, res) => {
-    res.send("Controler");
+    res.send("Login");
 }
