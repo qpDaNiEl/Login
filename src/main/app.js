@@ -4,6 +4,7 @@ import { loginControler } from "./loginControler";
 import { userControler } from "./userControler";
 import { registerControler } from "./registerControler";
 import { sequelize } from "../dataBase/dataBase";
+import { searchUser } from "./searchUser";
 
 sequelize.sync()
 
@@ -14,6 +15,8 @@ const PORT = process.env.PORT;
 server.use(express.json());
 
 server.get ('/user', userControler);
+
+server.post ('/user', searchUser);
 
 server.get ('/login', loginControler);
 
