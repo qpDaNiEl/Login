@@ -6,7 +6,7 @@ export const searchUser = async (req,res) => {
         const search = await Users.findOne({
             where: {id: req.body.id}
         });
-        res.send((search) ? search : "User not defined");
+        res.send((search) ? search : "User not found");
         
     } catch (error) {
         res.send(error);

@@ -6,6 +6,9 @@ import { registerControler } from "./registerControler";
 import { sequelize } from "../dataBase/dataBase";
 import { searchUser } from "./searchUser";
 import { deleteUser } from "./deleteUser";
+import { updateName } from "./updateName";
+
+//CRUD: C = CREATE, R = READ, U = UPDATE, D =  DELETE
 
 sequelize.sync()
 
@@ -19,12 +22,13 @@ server.get ('/user', userControler);
 
 server.post ('/user', searchUser);
 
+server.post ('/update', updateName);
+
 server.get ('/login', loginControler);
 
 server.post ('/register', registerControler);
 
 server.post ('/delete', deleteUser);
-
 
 
 server.listen(PORT, () => {console.log(`Server runing at http://localhost:${PORT}`)})
