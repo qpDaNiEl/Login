@@ -28,7 +28,7 @@ export const Users = sequelize.define('Users', {
             },
         }
     },
-    password:{
+    hash:{
         type: Sequelize.DataTypes.STRING,
         allowNull: false,
         validate: {
@@ -36,7 +36,7 @@ export const Users = sequelize.define('Users', {
                 msg: "Esse campo nao pode ser vazio"
             },
             len: {
-                args: [4 ,20],
+                args: [4 ,100],
                 msg: "Senha curta"
             }
         }

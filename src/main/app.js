@@ -1,4 +1,5 @@
 import express from "express";
+import bcrypt from "bcrypt";
 import "dotenv/config";
 import { loginControler } from "./loginControler";
 import { userControler } from "./userControler";
@@ -8,7 +9,9 @@ import { searchUser } from "./searchUser";
 import { deleteUser } from "./deleteUser";
 import { updateName } from "./updateName";
 
+
 //CRUD: C = CREATE, R = READ, U = UPDATE, D =  DELETE
+
 
 sequelize.sync()
 
