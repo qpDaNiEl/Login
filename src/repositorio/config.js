@@ -1,12 +1,14 @@
 const { Sequelize } = require('sequelize');
 
+//Exemplo
+
 export const sequelize = new Sequelize({
     host: 'localhost',
     dialect: 'mysql',
-    database: 'registros',
+    database: 'NomeBdExemplo',
     port: 3306,
-    username: 'root',
+    username: 'NomeExemplo',
     password: '',
-    logging: false
+    logging: true
 })
 

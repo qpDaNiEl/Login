@@ -1,6 +1,6 @@
 
 import { Sequelize } from "sequelize";
-import { sequelize } from "../dataBase";
+import { sequelize } from "../config";
 
 
 export const Users = sequelize.define('Users', {
@@ -9,7 +9,7 @@ export const Users = sequelize.define('Users', {
         primaryKey: true,
         autoIncrement: true,
     },
-    name: {
+    nome: {
         type: Sequelize.DataTypes.STRING,
         allowNull: false,
         validate: {
@@ -28,7 +28,7 @@ export const Users = sequelize.define('Users', {
             },
         }
     },
-    hash:{
+    senha:{
         type: Sequelize.DataTypes.STRING,
         allowNull: false,
         validate: {
