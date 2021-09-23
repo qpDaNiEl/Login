@@ -8,7 +8,9 @@ import { searchUser } from "./searchUser";
 import { deleteUser } from "./deleteUser";
 import { updateName } from "./updateName";
 
+
 //CRUD: C = CREATE, R = READ, U = UPDATE, D =  DELETE
+
 
 sequelize.sync()
 
