@@ -28,16 +28,12 @@ export const Users = sequelize.define('Users', {
             },
         }
     },
-    hash:{
+    hash: {
         type: Sequelize.DataTypes.STRING,
         allowNull: false,
         validate: {
             notEmpty: {
                 msg: "Esse campo nao pode ser vazio"
-            },
-            len: {
-                args: [4 ,20],
-                msg: "Senha curta"
             }
         }
     }

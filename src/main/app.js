@@ -20,17 +20,17 @@ const PORT = process.env.PORT;
 
 server.use(express.json());
 
-server.get ('/user', userControler);
+server.get('/user', userControler);
 
-server.post ('/user', searchUser);
+server.post('/user', searchUser);
 
-server.post ('/update', updateName);
+server.post('/update', updateName);
 
-server.get ('/login', loginControler);
+server.get('/login', loginControler);
 
-server.post ('/register', registerControler);
+server.post('/register', registerControler);
 
-server.post ('/delete', deleteUser);
+server.post('/delete', deleteUser);
 
 
-server.listen(PORT, () => {console.log(`Server runing at http://localhost:${PORT}`)})
+server.listen(PORT, () => { console.log(`Server runing at http://localhost:${PORT}`) })
